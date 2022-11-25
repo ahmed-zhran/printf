@@ -12,18 +12,18 @@ int _pr(char *s, ...)
 	int i = 0, k;
 
 	va_start(args, s);
-	
+
 	while (*(s + i) != '\0')
 	{
-		if ( *(s + i) == '%' && *(s + i + 1) == 'c')
+		if (*(s + i) == '%' && *(s + i + 1) == 'c')
 		{
 			_putchar(va_arg(args, int));
 			i++;
 		}
-		else if (*(s + i + 1) != '\0' && *(s + i) == '%' && *(s + i + 1)== 's')
+		else if (*(s + i + 1) != '\0' && *(s + i) == '%' && *(s + i + 1) == 's')
 		{
 			k = 0;
-			const char * str = va_arg(args, const char *);
+			const char *str = va_arg(args, const char *);
 
 			while (*(str + k) != '\0')
 			{
