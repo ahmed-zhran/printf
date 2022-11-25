@@ -6,10 +6,11 @@
  * Return: value
  */
 
-int _pr(char *s, ...)
+void _pr(char *s, ...)
 {
 	va_list args;
 	int i = 0, k;
+	char *str;
 
 	va_start(args, s);
 
@@ -23,7 +24,7 @@ int _pr(char *s, ...)
 		else if (*(s + i + 1) != '\0' && *(s + i) == '%' && *(s + i + 1) == 's')
 		{
 			k = 0;
-			const char *str = va_arg(args, const char *);
+			str = va_arg(args, char *);
 
 			while (*(str + k) != '\0')
 			{
