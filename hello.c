@@ -16,7 +16,7 @@ int _pr(const char *s, ...)
 
 	while (*(s + i) != '\0')
 	{
-		if (*(s + i) == '%' && *(s + i + 1) == 'c')
+		if (*(s + i + 1) != '\0' && *(s + i) == '%' && *(s + i + 1) == 'c')
 		{
 			_putchar(va_arg(args, int));
 			i++;
