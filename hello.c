@@ -6,7 +6,7 @@
  * Return: value
  */
 
-void _pr(char *s, ...)
+void _pr(const char *s, ...)
 {
 	va_list args;
 	int i = 0, k;
